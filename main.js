@@ -3,7 +3,7 @@
 
   /* ================= CONFIG ================= */
   const CONFIG = {
-    secretCode: "hello website",
+    secretCode: "let's start website",
     unlockDelay: 1500
   };
 
