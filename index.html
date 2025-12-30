@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Unlock Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= VOICE AUTH ================= -->
+  <section class="voice-auth" id="voiceAuth">
+    <h2>Voice Unlock</h2>
+
+    <p class="instruction">
+      Please say the secret code to unlock the website.
+    </p>
+
+    <!-- Language Selector -->
+    <select id="languageSelect" class="lang-select">
+      <option value="en-US">English</option>
+      <option value="hi-IN">Hindi</option>
+      <option value="fr-FR">French</option>
+      <option value="es-ES">Spanish</option>
+    </select>
+
+    <!-- Waveform Animation -->
+    <div class="waveform" id="waveform">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <button id="startBtn">🎤 Speak Code</button>
+    <p id="output" class="status"></p>
+  </section>
+
+  <!-- ================= LOGIN UI ================= -->
+  <section class="login hidden" id="loginSection">
+    <div class="login-card">
+      <h1>Login</h1>
+
+      <label>
+        Email
+        <input type="email" placeholder="Enter email" required />
+      </label>
+
+      <label>
+        Password
+        <input type="password" placeholder="Enter password" required />
+      </label>
+
+      <button class="login-btn">Login</button>
+
+      <div class="social-login">
+        <img src="./media/google-logo.png" alt="Google">
+        <img src="./media/facebook-logo.png" alt="Facebook">
+        <img src="./media//github-logo.png" alt="GitHub">
+      </div>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+/* ================= VOICE AUTH ================= */
+.voice-auth {
+  height: 100vh;
+  background: #f3fbff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-auth.hidden {
+  display: none;
+}
+
+.voice-auth h2 {
+  color: #333;
+}
+
+.instruction {
+  color: #555;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.status {
+  font-size: 1.1rem;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+/* ================= LANGUAGE ================= */
+.lang-select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ================= WAVEFORM ================= */
+.waveform {
+  display: flex;
+  gap: 6px;
+  height: 40px;
+  align-items: center;
+  opacity: 0.3;
+}
+
+.waveform.active {
+  opacity: 1;
+}
+
+.waveform span {
+  width: 6px;
+  height: 10px;
+  background: #0077ff;
+  border-radius: 4px;
+  animation: wave 1s infinite ease-in-out;
+}
+
+.waveform span:nth-child(2) { animation-delay: 0.1s; }
+.waveform span:nth-child(3) { animation-delay: 0.2s; }
+.waveform span:nth-child(4) { animation-delay: 0.3s; }
+.waveform span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes wave {
+  0%, 100% { height: 10px; }
+  50% { height: 35px; }
+}
+
+/* ================= BUTTON ================= */
+button {
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  box-shadow: 0 6px 15px rgba(0, 119, 255, 0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* ================= LOGIN ================= */
+.login {
+  height: 100vh;
+  background: #f3fbff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login.hidden {
+  display: none;
+}
+
+.login-card {
+  width: 320px;
+  padding: 2rem;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-card h1 {
+  text-align: center;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-top: 0.4rem;
+  height: 2.4rem;
+  padding: 0 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0077ff;
+}
+
+.login-btn {
+  margin-top: 0.5rem;
+}
+
+/* ================= SOCIAL ================= */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-login img {
+  height: 36px;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+  }
+}
